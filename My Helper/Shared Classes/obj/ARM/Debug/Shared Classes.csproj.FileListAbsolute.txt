@@ -1,0 +1,17 @@
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\bin\ARM\Debug\Shared Classes.dll
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\bin\ARM\Debug\Shared Classes.pdb
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\bin\ARM\Debug\Shared Classes.pri
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\Shared Classes.dll
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\Shared Classes.pdb
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\priconfig.xml
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\priconfig.xml.intermediate
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\layout.resfiles
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\layout.resfiles.intermediate
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\resources.resfiles
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\resources.resfiles.intermediate
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\pri.resfiles
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\pri.resfiles.intermediate
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\qualifiers.txt
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\qualifiers.txt.intermediate
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\MultipleQualifiersPerDimensionFound.txt
+C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\obj\ARM\Debug\Shared Classes.csprojResolveAssemblyReference.cache

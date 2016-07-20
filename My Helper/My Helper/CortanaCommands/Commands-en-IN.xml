@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.1">
+  <CommandSet xml:lang="en-in" Name="MyHelperCommands_en-in">
+    <CommandPrefix> My Helper, </CommandPrefix>
+    <Example> Show directions to Orion </Example>
+
+    <Command Name="showTripToDestination">
+      <Example> show directions to orion  </Example>
+      <ListenFor> show directions to {destination} </ListenFor>
+      <Feedback> Getting directions to {destination} </Feedback>
+      <Navigate/>
+    </Command>
+
+    <PhraseList Label="destination">
+      <Item>Orion</Item>
+      <Item>Octagon</Item>
+      <Item>Opal</Item>
+    </PhraseList>
+
+  </CommandSet>
+
+  <!-- Other CommandSets for other languages -->
+
+</VoiceCommands>

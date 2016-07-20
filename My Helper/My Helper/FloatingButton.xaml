@@ -1,0 +1,21 @@
+﻿<UserControl
+    x:Class="My_Helper.FloatingButton"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:My_Helper"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    d:DesignHeight="300"
+    d:DesignWidth="400">
+
+    <StackPanel Name="Pane" Orientation="Horizontal" Background="{ThemeResource SystemControlBackgroundAccentBrush}" Opacity="0.5" Width="70" Height="60">
+        <Image Name="TypeImage" Height="50" Width="50" Stretch="Uniform"/>
+        <StackPanel Orientation="Vertical">
+            <TextBlock Name="TitleTextBlock" FontSize="12" Margin="5" TextWrapping="Wrap"/>
+            <TextBlock Name="DistanceTextBlock" FontSize="10" Margin="5"/>
+        </StackPanel>
+    </StackPanel>
+
+
+</UserControl>
