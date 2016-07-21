@@ -9,15 +9,16 @@
     d:DesignHeight="300"
     d:DesignWidth="400">
 
-    <Grid Name="Pane" Opacity="0.5" Width="80" Height="80">
+    <Grid x:ConnectionId='1' Name="Pane" Opacity="0.5" Width="80" Height="80">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <Image Name="TypeImage" Height="50" Width="50" Stretch="Uniform" Visibility="Collapsed"/>
-        <TextBlock Name="TitleTextBlock" Grid.Row="0" FontSize="12" Margin="5" TextWrapping="WrapWholeWords"/>
-        <TextBlock Name="DistanceTextBlock" Grid.Row="1" FontSize="10" Margin="5"/>
+        <Image x:ConnectionId='2' Name="TypeImage" Height="50" Width="50" Stretch="Uniform" Visibility="Collapsed"/>
+        <TextBlock x:ConnectionId='3' Name="TitleTextBlock" Grid.Row="0" FontSize="12" Margin="5" TextWrapping="WrapWholeWords"/>
+        <TextBlock x:ConnectionId='4' Name="DistanceTextBlock" Grid.Row="1" FontSize="10" Margin="5"/>
     </Grid>
 
 
 </UserControl>
+

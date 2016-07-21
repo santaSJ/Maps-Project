@@ -65,7 +65,7 @@ namespace Shared_Classes.ViewModels
             });
             
             //10.759728, 
-            /*
+            
             pois.Add(new PointOfInterest()
             {
                 DisplayName = "Orion",
@@ -148,7 +148,7 @@ namespace Shared_Classes.ViewModels
 
             pois.Add(new PointOfInterest()
             {
-                DisplayName = "Agate",
+                DisplayName = "Agate Hostel",
                 NormalizedAnchorPoint = new Windows.Foundation.Point(0.5, 1),
                 Location = new Geopoint(new BasicGeoposition()
                 {
@@ -157,11 +157,43 @@ namespace Shared_Classes.ViewModels
                 }),
                 mapIconReference = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/hostels.png")),
                 Type = POI_Type.hostels,
-                MoreInfo = "Hostel first years"
+                MoreInfo = "Hostel for first years"
 
 
             });
-            
+            //10.763076, 
+            pois.Add(new PointOfInterest()
+            {
+                DisplayName = "Diamond Hostel",
+                NormalizedAnchorPoint = new Windows.Foundation.Point(0.5, 1),
+                Location = new Geopoint(new BasicGeoposition()
+                {
+                    Latitude = 10.763076,
+                    Longitude = 78.814406
+                }),
+                mapIconReference = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/hostels.png")),
+                Type = POI_Type.hostels,
+                MoreInfo = "Hostel for first years"
+
+
+            });
+
+            //, 
+            pois.Add(new PointOfInterest()
+            {
+                DisplayName = "Coral Hostel",
+                NormalizedAnchorPoint = new Windows.Foundation.Point(0.5, 1),
+                Location = new Geopoint(new BasicGeoposition()
+                {
+                    Latitude = 10.762161,
+                    Longitude = 78.815552
+                }),
+                mapIconReference = RandomAccessStreamReference.CreateFromUri(new Uri("ms-appx:///Assets/hostels.png")),
+                Type = POI_Type.hostels,
+                MoreInfo = "Hostel for first years"
+
+
+            });
             pois.Add(new PointOfInterest()
             {
                 DisplayName = "Opal",
@@ -193,8 +225,9 @@ namespace Shared_Classes.ViewModels
 
 
             });
-            //, 
-            */
+
+
+
             return pois;
         }
     }

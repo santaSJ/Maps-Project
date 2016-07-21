@@ -7,14 +7,15 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent">
+    <Grid x:ConnectionId='1' Name="LayoutRoot" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Transparent">
         
-        <CaptureElement Name="CameraStream" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" Width="600"/>
+        <CaptureElement x:ConnectionId='2' Name="CameraStream" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Stretch="UniformToFill" Width="600"/>
         <Grid Background="Transparent">
-            <Canvas Name="VirtualLayer" Background="Transparent">
+            <Canvas x:ConnectionId='3' Name="VirtualLayer" Background="Transparent">
             </Canvas>
         </Grid>
     </Grid>
     
 
 </Page>
+

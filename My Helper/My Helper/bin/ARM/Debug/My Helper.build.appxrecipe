@@ -9,16 +9,16 @@
     <SolutionConfiguration>Debug|ARM</SolutionConfiguration>
     <PackageArchitecture>arm</PackageArchitecture>
     <PackageIdentityName>901ebd67-31ac-4b48-a841-5d1a0bd09799</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\obj\ARM\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\obj\ARM\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\bin\ARM\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\bin\ARM\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\bin\ARM\Debug\My Helper.exe">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\bin\ARM\Debug\My Helper.exe">
       <PackagePath>entrypoint\My Helper.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\santh\.nuget\packages\Microsoft.ApplicationInsights\1.0.0\lib\portable-win81+wpa81\Microsoft.ApplicationInsights.dll">
@@ -342,94 +342,94 @@
     <AppxPackagedFile Include="C:\Users\santh\.nuget\packages\Win2D.uwp\1.18.0\runtimes\win10-arm\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\Shared Classes\bin\ARM\Debug\Shared Classes.dll">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\Shared Classes\bin\ARM\Debug\Shared Classes.dll">
       <PackagePath>Shared Classes.dll</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\santh\.nuget\packages\Win2D.uwp\1.18.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\ApplicationInsights.config">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\ApplicationInsights.config">
       <PackagePath>ApplicationInsights.config</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\atm.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\atm.png">
       <PackagePath>Assets\atm.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\food.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\food.png">
       <PackagePath>Assets\food.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\general.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\general.png">
       <PackagePath>Assets\general.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\guest_house.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\guest_house.png">
       <PackagePath>Assets\guest_house.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\health.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\health.png">
       <PackagePath>Assets\health.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\hostels.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\hostels.png">
       <PackagePath>Assets\hostels.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\my_location.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\my_location.png">
       <PackagePath>Assets\my_location.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\repair.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\repair.png">
       <PackagePath>Assets\repair.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\shopping.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\shopping.png">
       <PackagePath>Assets\shopping.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\study.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\study.png">
       <PackagePath>Assets\study.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\transport.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\transport.png">
       <PackagePath>Assets\transport.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\CortanaCommads\Commands-en-IN.xml">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\CortanaCommads\Commands-en-IN.xml">
       <PackagePath>CortanaCommads\Commands-en-IN.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\CortanaCommands\Commands-en-IN.xml">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\CortanaCommands\Commands-en-IN.xml">
       <PackagePath>CortanaCommands\Commands-en-IN.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\bin\ARM\Debug\My Helper.xr.xml">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\bin\ARM\Debug\My Helper.xr.xml">
       <PackagePath>My Helper.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\bin\ARM\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\bin\ARM\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\santh\Documents\Visual Studio 2015\Projects\My Helper\My Helper\bin\ARM\Debug\Core\My Helper.exe">
+    <AppxPackagedFile Include="C:\Users\santh\Desktop\Maps-Project\My Helper\My Helper\bin\ARM\Debug\Core\My Helper.exe">
       <PackagePath>My Helper.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

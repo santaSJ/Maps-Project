@@ -22,5 +22,7 @@ namespace Shared_Classes.Models
         public RandomAccessStreamReference mapIconReference{ get; set; }
         public string MoreInfo { get; set; }
         public Point NormalizedAnchorPoint { get; set; }
+        public double Left { get; set; }
+        public double Top { get; set; }
     }
 }

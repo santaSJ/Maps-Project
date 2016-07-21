@@ -23,6 +23,7 @@ using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
+using Windows.UI.Xaml.Shapes;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -43,8 +44,8 @@ namespace My_Helper
         {
             this.InitializeComponent();
             StartPreviewAsync();
-            CurrentPosition = new Geopoint(new BasicGeoposition() { Latitude = 10.759728, Longitude = 78.811040 });
-            //getPosition();
+            //CurrentPosition = new Geopoint(new BasicGeoposition() { Latitude = 10.759728, Longitude = 78.811040 });
+            getPosition();
             _compass = Compass.GetDefault();
             if( _compass != null)
             {
@@ -54,7 +55,6 @@ namespace My_Helper
                 _compass.ReadingChanged += _compass_ReadingChanged;
 
             }
-            
         }
 
         private async void _compass_ReadingChanged(Compass sender, CompassReadingChangedEventArgs e)
@@ -79,125 +79,111 @@ namespace My_Helper
                     {
                         VirtualLayer.Children.Remove(image);
                     }
-
+                    var lines = VirtualLayer.Children.OfType<Line>().ToList();
+                    foreach (var line in lines)
+                    {
+                        VirtualLayer.Children.Remove(line);
+                    }
+                    var texts = VirtualLayer.Children.OfType<TextBlock>().ToList();
+                    foreach (var text in texts)
+                    {
+                        VirtualLayer.Children.Remove(text);
+                    }
 
                     Debug.WriteLine(VirtualLayer.Children.Count);
                     // New Code
+
+                    List<PointOfInterest> points_to_display = new List<PointOfInterest>();
                     foreach (var poi in POIs)
                     {
                         var bearing = getBearing(CurrentPosition, poi.Location);
                         var diff = Math.Abs((double)compassReading - bearing);
                         if (diff < 30 || diff > 330)
                         {
-                            FloatingButton place = new FloatingButton();
-                            place.Title = poi.DisplayName;
-                            place.Location = poi.Location;
-                            place.Distance = getDistance(CurrentPosition, poi.Location);
-                            place.PlaceType = poi.Type;
-                            place.Left = getLeft(VirtualLayer.ActualWidth, compassReading, bearing);
-                            place.Top = 50;
-                            place.Tapped += Place_Tapped;
-                            List<LayoutHelper> points = new List<LayoutHelper>();
-                            var buttons = VirtualLayer.Children.OfType<FloatingButton>().ToList();
-                            foreach (var button in images)
-                            {
-                                points.Add(new LayoutHelper() { Left = button.Left, Top = button.Top, Width = button.ActualWidth });
-                            }
-                            Canvas.SetLeft(place, place.Left);
-                            Debug.WriteLine(points.Count);
-                            place.Top = getTop(points, place.Left, place.Top, place.ActualWidth);
-                            //Debug.WriteLine(place.Top);
-                            Canvas.SetTop(place, place.Top);
-                            VirtualLayer.Children.Add(place);
-                            Canvas.SetZIndex(place, 1);
+                            var point = poi;
+                            point.Left = getLeft(VirtualLayer.ActualWidth, compassReading, bearing);
+                            point.Top = VirtualLayer.ActualHeight/2 - 70;
+                            points_to_display.Add(point);
+
                         }
                     }
-
-                    // Remove all places out of range
-                    /*
-                    foreach (var child in VirtualLayer.Children)
+                    foreach (var poi in points_to_display)
                     {
                         
-                        var button = child as FloatingButton;
-                        var bearing = getBearing(CurrentPosition, button.Location);
-                        var diff = Math.Abs((double)compassReading - bearing);
-                        if( !(diff < 30 || diff > 330))
+                        for( int i = 0; i < points_to_display.Count; i++)
                         {
-                            VirtualLayer.Children.Remove(child);
+                            var _poi = points_to_display[i];
+                            if(Math.Abs(poi.Left-_poi.Left) < 80 && poi.Top == _poi.Top && poi != _poi)
+                            {
+                                if( getDistance(CurrentPosition, _poi.Location) > getDistance(CurrentPosition, poi.Location))
+                                {
+                                    points_to_display[i].Top -= 90;
+                                }
+                                else
+                                {
+                                    points_to_display[i].Top += 90;
+                                }
+                                i = 0;
+                            }
                         }
                     }
 
-                    
-                    // Change positions of places in range and already rendered
-                    foreach (var child in VirtualLayer.Children)
+                    for ( int i = 0; i < points_to_display.Count-1; i++)
                     {
-                        var button = child as FloatingButton;
-                        var bearing = getBearing(CurrentPosition, button.Location);
-                        var diff = Math.Abs((double)compassReading - bearing);
-                        button.Distance = getDistance(CurrentPosition, button.Location);
-                        button.Left = getLeft(VirtualLayer.ActualWidth, compassReading, bearing);
-                        Canvas.SetLeft(button, button.Left);
+                        var poi = points_to_display[i];
+                        for (int j = i+1; j < points_to_display.Count; j++)
+                        {
+                            var _poi = points_to_display[j];
+                            if( getDistance( poi.Location , _poi.Location) < 0.5 && Math.Abs( poi.Left - _poi.Left) < 50)
+                            {
+                                Line l = new Line();
+                                l.Stroke = new SolidColorBrush(Colors.Black);
+                                l.StrokeThickness = 3;
+                                if (getDistance(CurrentPosition, _poi.Location) > getDistance(CurrentPosition, poi.Location))
+                                {
+                                    l.X1 = poi.Left + 40;
+                                    l.Y1 = poi.Top;
+                                    l.X2 = _poi.Left + 40;
+                                    l.Y2 = _poi.Top + 80;
+
+                                }
+                                else
+                                {
+                                    l.X1 = poi.Left + 40;
+                                    l.Y1 = poi.Top + 80;
+                                    l.X2 = _poi.Left + 40;
+                                    l.Y2 = _poi.Top ;
+                                }
+                                l.StrokeEndLineCap = PenLineCap.Triangle;
+                                VirtualLayer.Children.Add(l);
+                                TextBlock distText = new TextBlock();
+                                distText.FontSize = 10;
+                                distText.Text = Math.Round(getDistance(_poi.Location, poi.Location), 3).ToString() + " Km";
+                                Canvas.SetLeft(distText, (l.X1 + l.X2) / 2 + 4);
+                                Canvas.SetTop(distText, (l.Y1 + l.Y2) / 2 - 6);
+                                VirtualLayer.Children.Add(distText);
+                            }
+                        }
+                    }
+                    foreach (var poi in points_to_display)
+                    {
+                        FloatingButton place = new FloatingButton();
+                        place.Title = poi.DisplayName;
+                        place.Location = poi.Location;
+                        place.Distance = Math.Round(getDistance(CurrentPosition, poi.Location), 3);
+                        place.PlaceType = poi.Type;
+                        place.Tapped += Place_Tapped;
+                        VirtualLayer.Children.Add(place);
+                        VirtualLayer.HorizontalAlignment = HorizontalAlignment.Stretch;
+                        VirtualLayer.VerticalAlignment = VerticalAlignment.Stretch;
+                        Canvas.SetLeft(place, poi.Left);
+                        Canvas.SetTop(place, poi.Top);
 
                     }
-                    */
+
+
                 });
 
-                /*
-                List<PointOfInterest> list = new List<PointOfInterest>();
-                foreach (var point in POIs)
-                {
-                    var bearing = getBearing(CurrentPosition, point.Location);
-                    var diff = Math.Abs((double)compassReading - bearing);
-                    if( diff < 30 || diff > 330)
-                    {
-                        list.Add(point);
-                    }
-                }
-                Debug.WriteLine(list.Count);
-                foreach (var poi in POIs)
-                {
-                    var bearing = getBearing(CurrentPosition, poi.Location);
-                    var diff = Math.Abs((double)compassReading - bearing);
-
-                    if ( diff < 30 || diff > 330)
-                    {
-                        await Dispatcher.RunAsync(CoreDispatcherPriority.High, () =>
-                        {
-                            // Skip places already rendered
-                            foreach (var child in VirtualLayer.Children)
-                            {
-                                var button = child as FloatingButton;
-                                if( button.Location == poi.Location)
-                                {
-                                    return;
-                                }
-                            }
-                            // Add new Place
-                            FloatingButton place = new FloatingButton();
-                            place.Title = poi.DisplayName;
-                            place.Location = poi.Location;
-                            place.Distance = getDistance(CurrentPosition, poi.Location);
-                            place.PlaceType = poi.Type;
-                            place.Left = getLeft(VirtualLayer.ActualWidth, compassReading, bearing);
-                            place.Top = 50;
-                            place.Tapped += Place_Tapped;
-                            List<LayoutHelper> points = new List<LayoutHelper>();
-                            foreach (var POI in VirtualLayer.Children)
-                            {
-                                var button = POI as FloatingButton;
-                                points.Add(new LayoutHelper() { Left = button.Left, Top = button.Top, Width = button.ActualWidth });
-                            }
-                            Canvas.SetLeft(place, place.Left);
-                            Debug.WriteLine(points.Count);
-                            Canvas.SetTop(place, getTop( points , place.Left , place.Top , place.ActualWidth));
-                            VirtualLayer.Children.Add(place);
-                            Canvas.SetZIndex(place, 1);
-                        });
-
-                    }
-                    
-                }
-                */
             }
             
         }
@@ -211,19 +197,6 @@ namespace My_Helper
             var a = Math.Pow(Math.Sin(dLat / 2), 2) + Math.Cos(ToRadian(p1.Position.Latitude)) * Math.Cos(ToRadian(p2.Position.Latitude)) * Math.Pow(Math.Sin(dLon / 2), 2);
             var b = 2 * Math.Atan2(Math.Sqrt(a), Math.Sqrt(1 - a));
             return 6373 * b;
-        }
-
-        private double getTop( List<LayoutHelper> points , double left , double top, double width)
-        {
-            foreach (var point in points)
-            {
-                double _left = point.Left, _top = point.Top, _width = point.Width, right = left + width;
-                if( _top == top && ((left >= _left && left <= _left + _width) || (right >= _left && right <= _left+_width)))
-                {
-                    return getTop(points, left, top + 50, width);
-                }
-            }
-            return top;
         }
 
         private async void Place_Tapped(object sender, TappedRoutedEventArgs e)
